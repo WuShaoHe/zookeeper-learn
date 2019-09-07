@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+
+    //zookeeper
+    compile("org.apache.zookeeper:zookeeper:3.4.14")
+    //curator
+    compile("org.apache.curator:curator-framework:4.0.0")
+    compile("org.apache.curator:curator-recipes:4.0.0")
+    //fastjson
+    compile("com.alibaba:fastjson:$fastjsonVersion")
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
